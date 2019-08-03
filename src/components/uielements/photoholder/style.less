@@ -1,0 +1,37 @@
+.p-passport-pic-holder {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 210px;
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  &:hover {
+    .pic-holder-edit {
+      opacity: 1;
+    }
+  }
+  .pic-holder-edit {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background-color: rgba(63, 63, 63, 0.425);
+    color: #fff;
+    i {
+      font-size: 32px;
+    }
+  }
+}

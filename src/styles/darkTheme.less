@@ -1,0 +1,83 @@
+@import "./base.less";
+@dark-theme-color1: #262c38;
+@dark-theme-color-light: #2f3543;
+@dark-color-text: #69717d;
+@dark-color-acent: #4fd2c2;
+@dark-theme-color2: lighten(@dark-theme-color1, 20%);
+@midnight-express: #232632;
+@midnight-express-light: lighten(@midnight-express, 5%);
+@midnight-express-light-2: lighten(@midnight-express, 2%);
+@azure: #fdfefe;
+@medium-turquoise: #4fd2c2;
+@tradewind: #77a39e;
+@ottoman: #d3d5d2;
+
+.p-layout.dark-theme {
+  background: @dark-theme-color1;
+  .p-layout-content__header {
+    background: @dark-theme-color-light;
+    border-bottom: @dark-theme-color2;
+    .content__header-title {
+      color: @dark-color-text;
+    }
+  }
+  .ant-table {
+    color: @dark-color-text;
+    .ant-table-tbody > tr > td {
+      border-bottom-color: lighten(@dark-theme-color-light, 5%);
+    }
+  }
+  .p-table {
+    background: @dark-theme-color1;
+    .ant-table-thead {
+      padding: 0 16px;
+      background: @dark-theme-color-light;
+      color: @dark-color-text !important;
+      tr > th {
+        border-bottom-color: lighten(@dark-theme-color-light, 5%);
+      }
+    }
+    .ant-table-tbody > tr:hover > td {
+      background: @dark-theme-color-light;
+    }
+  }
+
+  .ant-input {
+    background: @dark-theme-color-light;
+    color: @dark-color-text;
+    border: none;
+  }
+
+  .ant-select .ant-select-selection {
+    .ant-input.ant-select-search__field {
+      background: @dark-theme-color-light;
+      color: @dark-color-text;
+      border: none;
+      ::placeholder {
+        color: @dark-color-text !important;
+      }
+    }
+    background: @dark-theme-color-light;
+  }
+  ::placeholder {
+    color: @dark-color-text !important;
+  }
+  .ant-btn,
+  .btn {
+    background: @dark-theme-color-light !important;
+    color: @dark-color-text;
+    border-color: @dark-theme-color1;
+  }
+  .ant-tag {
+    background: @dark-theme-color-light;
+    color: @dark-color-text;
+    border: none;
+    &.ant-tag-has-color {
+    }
+  }
+  .sidebar-container {
+    .sidebar-top {
+      height: 80px !important;
+    }
+  }
+}

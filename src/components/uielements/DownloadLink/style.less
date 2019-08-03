@@ -1,0 +1,25 @@
+@import '../../../styles/base.less';
+.p-download-link {
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    display: inline-block;
+    
+    .p-download-link__label {
+        color: @primary-color;
+        &:hover {
+            cursor: pointer;
+            border-bottom: 1px solid @primary-color;;
+        }
+    }
+    .p-download-link__prefix {
+        padding-right: 8px;
+        color: rgba(0, 0, 0, 0.45);
+    }
+    .p-download-link__suffix {
+        padding-left: 16px;
+        color: @primary-color;
+    }
+}

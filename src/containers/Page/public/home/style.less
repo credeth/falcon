@@ -1,0 +1,119 @@
+.home-page {
+  height: 100vh;
+  display: flex;
+  // justify-content: center;
+  // align-items: center;
+  flex-direction: column;
+  background: black;
+  color: #fff;
+  font-family: "Courier New", Courier, monospace;
+  h2,
+  h3 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.678);
+  }
+  .topbar {
+    padding: 16px 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .right {
+     display: flex;
+    align-items: center;
+
+    }
+    .brand-name {
+      font-size: 28px;
+    }
+    .brand-actions {
+      // padding-right: 16px;
+      padding-left: 36px;
+    }
+  }
+  .content {
+    display: grid;
+    grid-template-columns: 500px 1fr 10px;
+    width: -webkit-fill-available;
+    padding: 32px 64px;
+    max-width: 1600px;
+    .illustration {
+      img {
+        margin-right: -20px;
+        height: 500px;
+      }
+    }
+    .menu-carousel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 500px;
+      height: 100%;
+      // mask-image: linear-gradient(to top, transparent, black);
+      .menu-card {
+        //   height: 100px;
+        // min-height: 200px;
+        padding-bottom: 18px;
+        &:hover {
+          h3 {
+            font-size: 28px;
+          }
+          p {
+            font-size: 24px;
+          }
+          .read-more {
+            font-size: 24px;
+            color: #fff !important;
+          }
+        }
+        h3 {
+          transition: all ease 0.3s;
+        }
+        p {
+          transition: all ease 0.3s;
+        }
+      }
+      .read-more {
+        color: #fff;
+        &::after {
+          position: relative;
+          content: "";
+          display: block;
+          width: 50px;
+          height: 6px;
+          margin: 0;
+          width: 100px;
+          padding-top: -10px;
+          // border-bottom: 4px solid rgb(253, 51, 51);
+          background-image: linear-gradient(to right, #2F3057,#135A46, #F8E500,#D58B00, rgb(212, 44, 44));
+        }
+      }
+    }
+    .navigator {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      .nav-btn {
+        cursor: pointer;
+      }
+    }
+  }
+}
+.slick-slider {
+  .slick-slide {
+    opacity: 0.1;
+    
+  }
+  .slick-slide.slick-current {
+    transition: all ease 0.6s;
+    opacity: 1;
+    // zoom: 1.2;
+  }
+  //   .slick-slide.slick-center {
+  //     padding-left: 120px;
+  //   }
+}

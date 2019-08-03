@@ -1,0 +1,57 @@
+.info-page {
+  height: 100vh;
+  background: #6c63ff;
+  padding: 16px 64px;
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+
+  .content {
+      display: grid;
+      height: 100%;
+      align-content: center;
+      justify-content: center;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 16px;
+      .left {
+          width: 500px;
+      }
+      .infographic {
+          svg {
+            fill: #fff;
+              height: 200px;
+        }
+      }
+      .title {
+        font-size: 28px;
+        font-weight: 700;
+      }
+      .desc {
+        font-size: 16px;
+        margin-bottom: 24px;
+      }
+  }
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 64px;
+  font-family: 'Courier New', Courier, monospace;
+  > div {
+    display: flex;
+  }
+  .link {
+    a {
+      padding-left: 30px;
+      color: rgba(255, 255, 255, 0.473);
+      &:hover {
+        color: #fff;
+      }
+      
+    }
+    &.link-active {
+        a {
+          color: #ffffff;
+        }
+      }
+  }
+}

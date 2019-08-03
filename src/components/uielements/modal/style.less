@@ -1,0 +1,88 @@
+.fl-modal-wrapper {
+  overflow: hidden;
+  top: -20px !important;
+}
+.fl-modal {
+  transform-origin: 50% 50% !important;
+  .ant-modal-content {
+    border-radius: 0;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  }
+  .ant-modal-header {
+    border-bottom: none;
+    padding: 0px;
+    .ant-modal-title {
+      font-weight: 400;
+      font-size: 20px;
+    }
+  }
+  .ant-modal-body {
+    padding: 24px 36px;
+    height: 420px;
+    max-height: 80%;
+    overflow: auto;
+    .ant-form-item-control:not(.has-error) {
+      .ant-input {
+        &:focus,
+        &:hover {
+          border-color: #a0a0a0;
+          box-shadow: none;
+        }
+      }
+    }
+    .ant-form-item {
+      margin-bottom: 12px;
+    }
+    .ant-form-item-required {
+      &::before {
+        display: none;
+      }
+      &::after {
+        content: "*";
+        margin-left: 4px;
+        line-height: 1;
+        font-size: 14px;
+        color: red;
+      }
+    }
+    .ant-form-item-label {
+      label {
+        font-size: 12px;
+        color: #7c8194;
+      }
+      font-weight: 500;
+      line-height: 20px;
+    }
+  }
+  .sub-heading {
+    font-size: 14px;
+    background: #eeeff3;
+    color: #7c8194;
+    margin-bottom: 24px;
+    padding: 8px;
+    border-left: 2px solid darken(#eeeff3, 20%);
+    padding-left: 12px;
+  }
+  .fl-modal-header {
+    display: flex;
+    padding: 20px;
+    border-bottom: 1px solid #eeeff3;
+    align-items: center;
+    .title {
+      flex-grow: 1;
+    }
+    .close-action {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      font-size: 30px;
+      &:hover {
+        background: #eeeff3;
+      }
+    }
+  }
+}

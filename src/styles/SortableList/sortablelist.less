@@ -1,0 +1,30 @@
+.sortable-list {
+    li {
+        list-style: none;
+    }
+}
+
+.sortable-item {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgb(228, 228, 228);
+    font-size: 14px;
+    padding: 10px 20px;
+}
+
+.sortable-item--esign {
+    >div {
+        display: flex;
+        margin-top: 12px;
+        .info {
+            flex: 1;
+        }
+        .email-inputs {
+            flex: 1;
+        }
+    }
+}
+
+.sortable-item-handle {
+    padding-right: 16px;
+}

@@ -1,0 +1,128 @@
+@import "../../../styles/base.less";
+
+.p-uploader {
+  margin: 8px 0;
+  display: flex;
+
+  .desc {
+    font-size: 12px;
+    display: flex;
+    align-items: center;  
+    .icon {
+      margin-right: 16px;
+    }
+  }
+  .title {
+    font-weight: 500;
+    padding: 12px;
+    width: 250px;
+    display: flex;
+    align-items: flex-start;
+    .icon {
+      color: @color--primary;
+      margin-right: 16px;
+    }
+  }
+  .extra {
+    border: 1px solid rgb(236, 236, 236);
+    display: flex;
+    align-items: center;
+    border-left: none;
+    padding: 16px;
+    width: 130px;
+  }
+  .action-feedback {
+    flex-basis: 110px;
+    border: 1px solid rgb(236, 236, 236);
+    border-left: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .feedback {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .progress-percent {
+        padding-left: 16px;
+      }
+    }
+    .actions {
+      display: flex;
+      .__item {
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        height: 36px;
+        width: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:not(:last-child) {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    
+    border: 1px solid rgb(236, 236, 236);
+    .__header {
+      display: flex;
+      //align-items: center;
+      //grid-template-columns: auto 1fr auto;
+
+      .file-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        .__name {
+          cursor: pointer;
+          color: @color--primary;
+          margin-top: 12px;
+          flex: 1;
+          overflow: hidden;
+          -o-text-overflow: ellipsis;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          max-width: 300px;
+          padding: 0 16px;
+        }
+        .__progress {
+          height: 2px;
+          background: #38be70;
+        }
+      }
+    }
+  }
+  .__footer {
+    padding: 0 12px;
+    padding-bottom: 12px;
+    border-top: none;
+  }
+
+  .upload-input {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    // background: linear-gradient(to right, #ed467e, #ff7171);
+    color: rgb(87, 87, 87);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .__btn {
+      padding: 16px;
+      text-align: center;
+      font-size: 14px;
+    }
+    input[type="file"] {
+      cursor: pointer;
+      position: absolute;
+      font-size: 80px;
+      opacity: 0;
+      top: 0;
+    }
+  }
+}

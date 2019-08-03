@@ -1,0 +1,102 @@
+@import "../../styles/base.less";
+
+.pr-uploader {
+  width: 100%;
+
+  .uploader--while-uploading {
+    border: 1px dashed #ccc;
+    border-radius: 4px;
+    padding: 16px;
+    position: relative;
+    .info {
+      display: flex;
+      align-items: center;
+      > .icon {
+        width: 50px;
+        i {
+          color: #f49c00;
+        }
+      }
+
+      > .percentage {
+        margin-left: auto;
+      }
+    }
+    .progress-percent {
+      margin-top: 8px;
+      height: 3px;
+      background: #38be70;
+      border-radius: 8px;
+    }
+  }
+  .uploader--while-uploaded {
+    border: 1px dashed #ccc;
+    border-radius: 4px;
+    padding: 16px;
+    position: relative;
+    .info {
+      display: flex;
+      align-items: center;
+      > .icon {
+        width: 50px;
+        i {
+          color: #f49c00;
+        }
+      }
+      > .label {
+          cursor: pointer;
+        color: @color--primary;
+        flex: 1;
+        overflow: hidden;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 300px;
+      }
+    }
+    .actions {
+      display: flex;
+      margin-left: auto;
+      text-align: right;
+      .action {
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        height: 36px;
+        width: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:not(:last-child) {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}
+
+.pr-uploader .uploading-input {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  // background: linear-gradient(to right, #ed467e, #ff7171);
+  color: rgb(87, 87, 87);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > div {
+    width: 100%;
+    padding: 16px;
+    border: 1px dashed #ccc;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 14px;
+  }
+  input[type="file"] {
+    cursor: pointer;
+    position: absolute;
+    font-size: 80px;
+    opacity: 0;
+    top: 0;
+  }
+}
