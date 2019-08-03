@@ -65,7 +65,7 @@ class FiveHundred extends React.Component {
           </div>
           <div className="card">
             <div className="infographic">
-              <img src="https://polymath.network/dist/assets/images/logo/logo-top-bar.svg" />
+              <img src="https://raw.githubusercontent.com/PolymathNetwork/polymath-core/master/Polymath.png" />
             </div>
             <div className="title">Tokenize an Asset on Polymath</div>
             <div className="desc">
