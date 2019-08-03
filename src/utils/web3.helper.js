@@ -1,5 +1,5 @@
 import Web3 from "web3";
-const contractAddress = "0x91609aD30EBa869C1F412E5656DeaD7bCaACaA5f";
+const contractAddress = "0xebf0F61645218c9f19E6b99dA415df26A09D8AEe";
 const contractABI = [
   {
     constant: true,
@@ -49,7 +49,7 @@ const contractABI = [
   {
     constant: false,
     inputs: [{ name: "_vouchee", type: "address" }],
-    name: "vouche",
+    name: "vouch",
     outputs: [],
     payable: false,
     stateMutability: "nonpayable",
@@ -176,10 +176,10 @@ const web3Obj = {
       try {
         console.log(web3Obj);
         let res = await web3Obj.contract.methods
-          .vouche(address)
+          .vouch(address)
           .estimateGas({ from: senderAddress });
         let vouched = web3Obj.contract.methods
-          .vouche(address)
+          .vouch(address)
           .send({ from: senderAddress })
           .on("transactionHash", function(hash) {})
           .on("confirmation", function(confirmationNumber, receipt) {})
