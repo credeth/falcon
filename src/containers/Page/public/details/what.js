@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./base.less";
 import Topbar from "./topbar";
-import BuildIcon from "../../../../image/hook.svg";
+import BuildIcon from "../../../../image/ethereum.svg";
 import ReactSVG from "react-svg";
-
 class FiveHundred extends React.Component {
+  
   render() {
     return (
       <div className="info-page info--what">

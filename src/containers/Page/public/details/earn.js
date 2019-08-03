@@ -22,6 +22,30 @@ class FiveHundred extends React.Component {
           </div>
           <div className="card">
             <div className="infographic">
+              <img
+                src="https://instadapp.io/img/brand.png"
+              />
+            </div>
+            <div className="title">Move your assets using InstaDApp</div>
+            <div className="desc">
+              Move your locked assets between different protocols using
+              InstaDapp's protocol bridge. Get 1 REP for every 100 ETH moved.
+            </div>
+          </div>
+          <div className="card">
+            <div className="infographic">
+              <img
+                style={{ marginRight: "-140px" }}
+                src="https://miro.medium.com/max/600/1*y8AB0mSNqXbNt5TnS5-ReA.png"
+              />
+            </div>
+            <div className="title">Transaction on MATIC</div>
+            <div className="desc">
+              Do a transaction on MATIC Sidechain and earn 10 reputation.
+            </div>
+          </div>
+          <div className="card">
+            <div className="infographic">
               <img src="https://cdp.makerdao.com/static/media/maker-logo-footer.303cdedd.svg" />
             </div>
             <div className="title">Lock ETH in MakerDAO CDP</div>
@@ -63,7 +87,7 @@ class FiveHundred extends React.Component {
             </div>
             <div className="title">Complete KYC using IdentityMind</div>
             <div className="desc">
-            You will get 100 Reputation for completing KYC
+              You will get 100 Reputation for completing KYC
             </div>
           </div>
           <div className="card">
@@ -72,16 +96,18 @@ class FiveHundred extends React.Component {
             </div>
             <div className="title">Repay loan on Compound</div>
             <div className="desc">
-            You will get 1 Reputation for every 10 ETH worth of loan you repay on Compound
+              You will get 1 Reputation for every 10 ETH worth of loan you repay
+              on Compound
             </div>
           </div>
+          
           <div className="card">
             <div className="infographic">
               {/* <img src="https://files.coinswitch.co/public/images/Logo.svg" /> */}
             </div>
             <div className="title">More integrations coming soon</div>
             <div className="desc">
-            Reach out to us if you want to integrate your dApp with Credeth!
+              Reach out to us if you want to integrate your dApp with Credeth!
             </div>
           </div>
         </div>

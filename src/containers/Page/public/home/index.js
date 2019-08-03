@@ -9,7 +9,8 @@ import { login } from "redux/Authentication/actions";
 import { connect } from "react-redux";
 class Onboard extends Component {
   state = {
-    current: 1
+    current: 1,
+    loading: false
   };
   onChange = direction => {
     if (direction === "up") {
@@ -26,10 +27,16 @@ class Onboard extends Component {
     // });
   }
   onLoggedIn = account => {
+    this.setState({
+      loading: false
+    })
     this.props.login(account);
     this.props.history.push("/dashboard");
   };
   importTorus = () => {
+    this.setState({
+      loading: true
+    })
     this.enableTorus();
   };
   enableTorus = () => {
@@ -73,7 +80,7 @@ class Onboard extends Component {
           <div className="right">
             {/* <div className="brand-name">CREDETH</div> */}
             <div className="brand-actions">
-              <Button size="large" type="primary" onClick={this.importTorus}>
+              <Button loading={this.state.loading} size="large" type="primary" onClick={this.importTorus}>
                 LOGIN
               </Button>
             </div>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import {Button} from "antd"
 import "./base.less";
 import Topbar from "./topbar";
-import BuildIcon from "../../../../image/hook.svg";
+import BuildIcon from "../../../../image/start.svg";
 import ReactSVG from "react-svg";
 import web3Obj from "utils/web3.helper";
 import { connect } from "react-redux";
