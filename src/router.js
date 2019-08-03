@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { AnimatedRoute } from "react-router-transition";
 import { connect } from "react-redux";
 import asyncComponent from "./helpers/AsyncFunc";
-// import App from "./containers/App/App";
+import DashboardApp from "./containers/App/App";
 import "./styles/styles.less";
 const RestrictedRoute = ({ component: Component, isLoggedIn, ...rest }) => (
   <Route
@@ -15,7 +15,7 @@ const RestrictedRoute = ({ component: Component, isLoggedIn, ...rest }) => (
       ) : (
         <Redirect
           to={{
-            pathname: "/signin",
+            pathname: "/",
             state: { from: props.location }
           }}
         />
@@ -28,6 +28,11 @@ const PublicRoutes = ({ history, isLoggedIn }) => {
   return (
     <Router>
       <Switch>
+      <RestrictedRoute
+          path="/dashboard"
+          component={DashboardApp}
+          isLoggedIn={isLoggedIn}
+        />
         <AnimatedRoute
           exact
           atEnter={{ offset: -100 }}
@@ -50,6 +55,11 @@ const PublicRoutes = ({ history, isLoggedIn }) => {
           exact
           path={"/build"}
           component={asyncComponent(() => import("./containers/Page/public/details/build"))}
+        />
+        <Route
+          exact
+          path={"/earn"}
+          component={asyncComponent(() => import("./containers/Page/public/details/earn"))}
         />
         <Route
           exact

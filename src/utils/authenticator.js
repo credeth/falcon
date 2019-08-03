@@ -1,16 +1,16 @@
 class Auth {
   static isLoggedIn() {
-    return !!localStorage.jwt;
+    return !!sessionStorage.selectedAddress;
   }
   static getToken() {
-    return localStorage.jwt;
+    return sessionStorage.selectedAddress;
   }
   static login(jwt) {
-    localStorage.setItem('jwt', jwt);
+    sessionStorage.setItem('selectedAddress', jwt);
   }
 
   static logOut() {
-    localStorage.removeItem('jwt');
+    sessionStorage.removeItem('selectedAddress');
   }
 }
 

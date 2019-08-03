@@ -7,6 +7,12 @@ const initState = {
 
 export default function sessionReducer(state = initState, action) {
   switch (action.type) {
+    case types.LOGIN_ETH: {
+      return {
+        ...state,
+        isAuthenticated: true
+      }
+    }
     case types.LOG_IN_SUCCESS: {
       return {
         ...state,

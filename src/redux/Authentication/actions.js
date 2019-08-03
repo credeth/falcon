@@ -1,4 +1,6 @@
 export const actions = {
+  LOGIN_ETH: "LOGIN_ETH",
+
   LOG_IN_REQUEST: "LOG_IN_REQUEST",
   LOG_IN_SUCCESS: "LOG_IN_SUCCESS",
   LOG_IN_FAILED: "LOG_IN_FAILED",
@@ -11,6 +13,11 @@ export const actions = {
   UNAUTHORIZED_ACCESS: "UNAUTHORIZED_ACCESS",
   FORBIDDEN_ACCESS: "FORBIDDEN_ACCESS"
 };
+
+export const login = (address) => ({
+  type: actions.LOGIN_ETH,
+  payload: address
+})
 
 export const logInRequest = data => ({
   type: actions.LOG_IN_REQUEST,

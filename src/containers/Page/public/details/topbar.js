@@ -10,6 +10,9 @@ class Topbar extends React.Component {
         <div></div>
 
         <div className="links">
+        <div className={active === "home" ? "link link-active": "link"}>
+                <Link to="/">Credeth</Link>
+            </div>
             <div className={active === "what" ? "link link-active": "link"}>
                 <Link to="/what">What</Link>
             </div>
@@ -21,6 +24,9 @@ class Topbar extends React.Component {
             </div>
             <div className={active === "build" ? "link link-active": "link"}>
                 <Link to="/build">Build</Link>
+            </div>
+            <div className={active === "earn" ? "link link-active": "link"}>
+                <Link to="/earn">How To Earn Reputation</Link>
             </div>
         </div>
       </div>

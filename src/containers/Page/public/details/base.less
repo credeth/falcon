@@ -3,55 +3,94 @@
   background: #6c63ff;
   padding: 16px 64px;
   color: #ffffff;
-  font-family: 'Courier New', Courier, monospace;
-
+  font-family: "Courier New", Courier, monospace;
+  overflow-y: auto;
+  &.info--what {
+    background: #2f3057;
+  }
+  &.info--why {
+    background: #135A46;
+  }
+  &.info--get-started {
+    background: #D58B00;
+  }
+  &.info--build {
+    background: #AA4646;
+  }
+  &.info--earn {
+    background: #000;
+  }
   .content {
-      display: grid;
-      height: 100%;
-      align-content: center;
-      justify-content: center;
-      grid-template-columns: 1fr 1fr;
-      grid-column-gap: 16px;
-      .left {
-          width: 500px;
-      }
-      .infographic {
-          svg {
-            fill: #fff;
-              height: 200px;
+    display: grid;
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    &.content--grid {
+      grid-template-columns: 1fr 1fr 1fr;
+      .card {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 24px;
+        border: 2px solid #ffffff2a;
+        &:hover {
+
+          background: linear-gradient(to right, rgb(173, 38, 38), purple);
+        }
+        .title {
+          font-size: 18px;
+        }
+        img {
+          height: 50px;
+          padding-bottom: 16px;
         }
       }
-      .title {
-        font-size: 28px;
-        font-weight: 700;
+    }
+    .left {
+      width: 500px;
+    }
+    .infographic {
+      svg {
+        fill: #fff;
+        height: 200px;
       }
-      .desc {
-        font-size: 16px;
-        margin-bottom: 24px;
-      }
+    }
+    .title {
+      font-size: 28px;
+      font-weight: 700;
+    }
+    .desc {
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
   }
 }
 .topbar {
   display: flex;
   justify-content: space-between;
   padding: 16px 64px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   > div {
     display: flex;
   }
   .link {
     a {
+      font-size: 18px;
       padding-left: 30px;
       color: rgba(255, 255, 255, 0.473);
       &:hover {
         color: #fff;
       }
-      
     }
     &.link-active {
-        a {
-          color: #ffffff;
-        }
+      a {
+        color: #ffffff;
       }
+    }
   }
 }
