@@ -111,7 +111,7 @@ class Onboard extends Component {
                 <p>
                   Reputation is a necessary part of the real world, but there is
                   no onchain global reputation source. Credeth enables
-                  developers to implement Sybil protection and analyze someone's
+                  developers to implement CIBIL protection and analyze someone's
                   credibility. For example, it can be used by a lending protocol
                   to lend money onchain by using reputation as a credit score.
                   It can also be used by a new dApp to airdrop their tokens and
