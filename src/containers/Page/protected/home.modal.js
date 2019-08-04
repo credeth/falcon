@@ -37,12 +37,12 @@ export class ModalContent extends Component {
     const { setFields, getFieldValue } = this.props.form;
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log(values.receiver);
         try {
           this.onSuccess();
           web3Obj
             .vouch(values.receiver, Auth.getToken())
             .then(rec => {
+              this.onSuccess();
               console.log(rec);
               message.success(rec);
             })
@@ -91,7 +91,7 @@ export class ModalContent extends Component {
           <h2>Receivers Address</h2>
           <Input
             required
-            placeholder="0x5b792d02f1e3901af65a151ec7908a6e465554f4"
+            placeholder="Ethereum Address or ENS Name"
             getFieldDecorator={this.props.form.getFieldDecorator}
             name="receiver"
           />

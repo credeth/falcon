@@ -174,7 +174,10 @@ const web3Obj = {
   vouch: function(address, senderAddress) {
     return new Promise(async (resolve, reject) => {
       try {
-        console.log(web3Obj);
+        let isAddress = web3Obj.web3.utils.isAddress(address);
+        if(!isAddress) {
+          address = await web3Obj.web3.eth.ens.getAddress(address);
+        } 
         let res = await web3Obj.contract.methods
           .vouch(address)
           .estimateGas({ from: senderAddress });
