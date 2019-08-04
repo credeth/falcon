@@ -11,6 +11,9 @@ class DashApp extends React.Component {
     show: false
   };
   async componentWillMount() {
+    window.web3 = {};
+    window.ethereum = null;
+
     await import("@toruslabs/torus-embed");
     let self = this;
     setTimeout(() => {
