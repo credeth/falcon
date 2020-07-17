@@ -10,7 +10,7 @@
     "history": "4.6.3",
     "immutable": "3.8.2",
     "jszip": "3.1.5",
-    "lodash": "4.17.4",
+    "lodash": "4.17.19",
     "lottie-web": "^5.5.7",
     "moment": "2.18.1",
     "nprogress": "0.2.0",
